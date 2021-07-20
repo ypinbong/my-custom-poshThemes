@@ -1,0 +1,168 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#046f8a",
+          "foreground": "#000000",
+          "leading_diamond": "▓",
+          "properties": {
+            "postfix": "",
+            "prefix": "",
+            "text": ""
+          },
+          "style": "diamond",
+          "type": "text"
+        },
+        {
+          "background": "#046f8a",
+          "foreground": "#000000",
+          "powerline_symbol": "",
+          "properties": {
+            "prefix": " ﴱ",
+            "template": " {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}"
+          },
+          "style": "powerline",
+          "type": "kubectl"
+        },
+        {
+          "background": "#008AD7",
+          "foreground": "#000000",
+          "powerline_symbol": "",
+          "properties": {
+            "display_id": false,
+            "display_name": true,
+            "info_separator": " @ ",
+            "prefix": " ﴃ "
+          },
+          "style": "powerline",
+          "type": "az"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "#2f2f2f",
+          "foreground": "#26C6DA",
+          "leading_diamond": "▓",
+          "properties": {
+            "alpine": "",
+            "arch": "",
+            "centos": "",
+            "debian": "",
+            "elementary": "",
+            "fedora": "",
+            "gentoo": "",
+            "linux": "",
+            "macos": "",
+            "manjaro": "",
+            "mint": "",
+            "opensuse": "",
+            "postfix": "<#046f8a> </>",
+            "raspbian": "",
+            "ubuntu": "",
+            "windows": "",
+            "wsl": "",
+            "wsl_separator": " on "
+          },
+          "style": "diamond",
+          "type": "os"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#046f8a",
+          "properties": {
+            "display_default": false,
+            "display_host": false,
+            "host_color": "#2EEFBF",
+            "postfix": "<#046f8a> </>",
+            "user_color": "#046f8a",
+            "user_info_separator": "<#046f8a ></>"
+          },
+          "style": "diamond",
+          "type": "session"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#046f8a",
+          "properties": {
+            "postfix": "<#046f8a> </>",
+            "root_icon": ""
+          },
+          "style": "diamond",
+          "type": "root"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#fafafa",
+          "properties": {
+            "enable_hyperlink": true,
+            "folder_icon": "<#B5B2C2> </>",
+            "folder_separator_icon": "<#046f8a> </>",
+            "home_icon": " ",
+            "prefix": "<#B5B2C2>  </>",
+            "style": "agnoster_short"
+          },
+          "style": "diamond",
+          "type": "path"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#048a62",
+          "properties": {
+            "ahead_color": "#2EC4B6",
+            "behind_color": "#8A4FFF",
+            "color_background": false,
+            "display_stash_count": true,
+            "display_status": true,
+            "display_upstream_icon": true,
+            "local_changes_color": "#048a62",
+            "prefix": "<#048a62> </>",
+            "staging_color": "#2FDA4E",
+            "status_colors_enabled": true,
+            "working_color": "#E84855"
+          },
+          "style": "diamond",
+          "type": "git"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#fafafa",
+          "properties": {
+            "postfix": "",
+            "prefix": "",
+            "text": ""
+          },
+          "style": "diamond",
+          "trailing_diamond": "",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#046f8a",
+          "properties": {
+            "text": "❯"
+          },
+          "style": "plain",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "console_title": true,
+  "console_title_style": "template",
+  "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
+  "final_space": true
+}

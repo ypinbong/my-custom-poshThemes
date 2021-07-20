@@ -1,0 +1,154 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#8B949E",
+          "properties": {
+            "text": ""
+          },
+          "style": "plain",
+          "type": "text"
+        },
+        {
+          "foreground": "#8B949E",
+          "properties": {
+            "prefix": "[",
+            "postfix": "]"
+          },
+          "style": "plain",
+          "type": "time"
+        },
+        {
+          "foreground": "#5D5E60",
+          "properties": {
+            "postfix": "<#5D5E60> </>",
+            "ubuntu": "",
+            "windows": "",
+            "wsl": "",
+            "wsl_separator": " on "
+          },
+          "style": "diamond",
+          "type": "os"
+        },
+        {
+          "background": "#1c2a44",
+          "foreground": "#ffff66",
+          "properties": {
+            "postfix": "<#7a7a7a> </>",
+            "root_icon": ""
+          },
+          "style": "diamond",
+          "type": "root"
+        },
+        {
+          "foreground": "#5D5E60",
+          "properties": {
+            "folder_icon": "  ",
+            "folder_separator_icon": "/",
+            "postfix": "<#8B949E>  </>",
+            "style": "full"
+          },
+          "style": "diamond",
+          "type": "path"
+        },
+        {
+          "foreground": "#0CAA70",
+          "properties": {
+            "prefix": "<#8B949E>on</>",
+            "branch_icon": "<#0CAA70> </>",
+            "postfix": "<#0CAA70> </>"
+          },
+          "style": "diamond",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#CECE04",
+          "properties": {
+            "prefix": ""
+          },
+          "style": "plain",
+          "type": "root"
+        },
+        {
+          "foreground": "#100e23",
+          "properties": {
+            "prefix": "  "
+          },
+          "style": "plain",
+          "type": "python"
+        },
+        {
+          "foreground": "#CB4B16",
+          "style": "plain",
+          "type": "exit"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#fafafa",
+          "leading_diamond": "▓",
+          "properties": {
+            "postfix": "",
+            "prefix": "",
+            "text": ""
+          },
+          "style": "diamond",
+          "type": "text"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#8B949E",
+          "properties": {
+            "postfix": "",
+            "prefix": "",
+            "text": "  "
+          },
+          "style": "diamond",
+          "type": "text"
+        },
+        {
+          "background": "#2f2f2f",
+          "foreground": "#fafafa",
+          "properties": {
+            "postfix": "",
+            "prefix": "",
+            "text": ""
+          },
+          "style": "diamond",
+          "trailing_diamond": "",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#FFCE5C",
+          "properties": {
+            "postfix": "<#fafafa>  </>",
+            "style": "roundrock",
+            "threshold": 500
+          },
+          "style": "plain",
+          "type": "executiontime"
+        }
+      ],
+      "type": "rprompt"
+    }
+  ],
+  "console_title": true,
+  "console_title_style": "template",
+  "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
+  "final_space": true
+}
