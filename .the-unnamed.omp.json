@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#676767",
+          "style": "diamond",
+          "template": "  CPU: {{ round .PhysicalPercentUsed .Precision }}% | ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#676767",
+          "style": "diamond",
+          "template": "MEM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB \uf85a ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#AFAFAF",
+          "properties": {
+            "folder_icon": " \ue613 ",
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "style": "diamond",
+          "template": " {{ .Path }}<#EFEFEF> \ue285 </>",
+          "type": "path"
+        },
+        {
+          "foreground": "#FC5D3D",
+          "properties": {
+            "branch_icon": "\uf418 "
+          },
+          "style": "plain",
+          "template": "<#AFAFAF>on</> {{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "type": "git"
+        },
+        {
+          "foreground": "#6c7b50",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "diamond",
+          "template": "<#AFAFAF>using</> \ue718 v{{.Full }} ",
+          "type": "node"
+        },
+        {
+          "foreground": "#ce5f5f",
+          "style": "diamond",
+          "template": "<#AFAFAF>&</> \ue71e  v{{ .Full }} <#EFEFEF> \ue285  </>",
+          "type": "npm"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#AFAFAF",
+          "style": "plain",
+          "template": "[{{ .CurrentDate | date .Format }}]",
+          "type": "time"
+        },
+        {
+          "foreground": "#FC5D3D",
+          "style": "plain",
+          "template": " ﮊ  ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
